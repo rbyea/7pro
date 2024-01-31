@@ -37,6 +37,15 @@
             <a href="#" class="header-search__link">
               <img src="./images/dist/loop.svg" alt="" />
             </a>
+
+            <form class="header-search-widget">
+              <img src="./images/dist/poly.svg" alt="" />
+              <input
+                type="text"
+                placeholder="Введите запрос"
+                class="input input-search"
+              />
+            </form>
           </div>
           <div class="header__button">
             <a href="#" class="btn btn__default btn_transparent">
@@ -47,9 +56,48 @@
               <span> Записаться на приём </span>
             </a>
           </div>
+
+          <a href="#" class="header-burger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
         </div>
       </div>
     </header>
+
+    <div class="header-mobile">
+      <div class="header-mobile__wrapper">
+        <div class="header-mobile__container">
+          <a href="#" class="header-mobile__link"> Услуги </a>
+          <a href="#" class="header-mobile__link active"> Врачи </a>
+          <a href="#" class="header-mobile__link"> Наши работы </a>
+          <a href="#" class="header-mobile__link"> Контакты </a>
+        </div>
+
+        <div class="header-mobile__search">
+          <label class="label label__default">
+            <span>Поиск по сайту</span>
+            <input
+              type="text"
+              placeholder="Введите запрос"
+              class="input input__default"
+            />
+          </label>
+        </div>
+
+        <a href="#" class="header__phone">
+          <img src="./images/dist/phone.svg" alt="" />
+          <span>+7 999 999-99-99</span>
+        </a>
+
+        <div class="header-mobile__button">
+          <a href="#" class="btn btn__default">
+            <span> Записаться на приём </span>
+          </a>
+        </div>
+      </div>
+    </div>
 
     <main class="main">
       <section class="section index index_offset">
@@ -72,10 +120,16 @@
 
             <div class="index__container">
               <div class="index__width">
-                <div
-                  class="index__item"
-                  style="background-image: url(./images/dist/index1.jpg)"
-                >
+                <div class="index__item">
+                  <div class="index-images">
+                    <picture>
+                      <source
+                        srcset="./images/dist/index-1-desc.jpg"
+                        media="(max-width: 1100px)"
+                      />
+                      <img src="./images/dist/index1.jpg" alt="" />
+                    </picture>
+                  </div>
                   <div class="index__title index__title_size">
                     <span>Имплантация зубов</span>
                     все на 4/6
@@ -87,10 +141,16 @@
                 </div>
               </div>
               <div class="index__width">
-                <div
-                  class="index__item"
-                  style="background-image: url(./images/dist/index2.jpg)"
-                >
+                <div class="index__item">
+                  <div class="index-images">
+                    <picture>
+                      <source
+                        srcset="./images/dist/index-2-desc.jpg"
+                        media="(max-width: 1100px)"
+                      />
+                      <img src="./images/dist/index2.jpg" alt="" />
+                    </picture>
+                  </div>
                   <div class="index__title">
                     <span>Брекеты</span>
                     со скидкой 25%
@@ -102,10 +162,16 @@
                 </div>
               </div>
               <div class="index__width">
-                <div
-                  class="index__item"
-                  style="background-image: url(./images/dist/index3.jpg)"
-                >
+                <div class="index__item">
+                  <div class="index-images">
+                    <picture>
+                      <source
+                        srcset="./images/dist/index-3-desc.jpg"
+                        media="(max-width: 1100px)"
+                      />
+                      <img src="./images/dist/index3.jpg" alt="" />
+                    </picture>
+                  </div>
                   <div class="index__title">
                     Бесплатная
                     <span>консультация</span>
@@ -730,7 +796,7 @@
           </div>
         </div>
       </section>
-      
+
       <section class="section feedback feedback_offset">
         <div class="wrapper wrapper__default">
           <div class="feedback__container">
@@ -770,10 +836,11 @@
               </div>
               <div class="feedback__button">
                 <div class="feedback-btn-item">
-                  <a href="#" class="btn btn__default btn_transparent btn_white">
-                    <span>
-                      Отправить заявку
-                    </span>
+                  <a
+                    href="#"
+                    class="btn btn__default btn_transparent btn_white"
+                  >
+                    <span> Отправить заявку </span>
                   </a>
                 </div>
               </div>
@@ -1144,12 +1211,37 @@
     <script src="./js/db/swiper.js"></script>
 
     <script>
+      $(document).mouseup(function (e) {
+        var div = $(".header-search-widget");
+        if (!div.is(e.target) && div.has(e.target).length === 0) {
+          div.removeClass("active");
+        }
+      });
+
+      const implantImage = document.querySelectorAll(".implant__image")
+
+      console.log(implantImage);
+
       $(".implant__width").matchHeight({
         byRow: true,
       });
 
       $(".about__item").matchHeight({
         byRow: true,
+      });
+
+      $(".header-search__link").on("click", function () {
+        $(this)
+          .closest(".header-search")
+          .find(".header-search-widget")
+          .addClass("active");
+      });
+
+      $(".header-burger").on("click", function (e) {
+        e.preventDefault();
+
+        $(".header-mobile").toggleClass("active");
+        $(this).toggleClass("active");
       });
 
       $(".input-phone").mask("+7(999) 99-99-999");

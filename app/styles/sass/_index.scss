@@ -2,10 +2,26 @@
   &__widget {
     position: relative;
   }
+
+  &-images {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    pointer-events: none;
+    img {
+      width: 100%;
+      object-fit: cover;
+      height: 100%;
+    }
+  }
+
   &_offset {
     padding-top: 48px;
     padding-bottom: 100px;
   }
+
   &-social {
     position: absolute;
     top: 50%;
@@ -14,13 +30,16 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
     &__link {
       margin-bottom: 32px;
+
       &:last-child {
         margin-bottom: 0;
       }
     }
   }
+
   &__container {
     display: flex;
     align-items: center;
@@ -36,12 +55,13 @@
     padding: 32px 48px;
     position: relative;
     border-radius: 36px;
+    overflow: hidden;
   }
 
   &__width {
     padding-left: 12px;
     padding-right: 12px;
-    max-width: 376px;
+    max-width: 401px;
     width: 100%;
 
     &:first-child {
@@ -106,6 +126,7 @@
     position: absolute;
     right: 24px;
     bottom: 24px;
+
     &:hover {
       .arrow {
         background-color: #fff;
@@ -143,5 +164,77 @@
       width: 12px;
       transition: all 0.4s ease;
     }
+  }
+}
+
+
+@media (max-width: 1100px) {
+  .index_offset {
+    padding-top: 118px;
+  }
+}
+
+@media (max-width: 1480px) {
+  .index-social {
+    display: none;
+  }
+}
+
+@media (max-width: 1310px) {
+  .index__title {
+    font-size: 21px;
+  }
+
+  .index__title_size {
+    font-size: 31px;
+  }
+
+  .index__width:nth-child(2) .index__item {
+    padding: 39px 28px;
+  }
+
+  .index__width:nth-child(2) .index__title:before {
+    bottom: -40px;
+  }
+
+  .index__width:nth-child(3) .index__title:before {
+    bottom: -14px;
+  }
+  .index__width:nth-child(3) .index__item {
+    padding: 38px 28px;
+  }
+}
+
+@media (max-width: 1250px) {
+  .index__item {
+    padding: 33px 23px;
+  }
+  .index__width:nth-child(2) .index__item {
+    padding: 39px 23px;
+  }
+  .index__width:nth-child(3) .index__item {
+    padding: 38px 23px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .index__container {
+    flex-wrap: wrap;
+  }
+
+  .index__width:first-child {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 24px;
+  }
+
+  .index__width:nth-child(2) {
+    max-width: 100%;
+    width: 60%;
+  }
+  
+  .index__width:nth-child(3) {
+    max-width: 100%;
+    width: 40%;
   }
 }

@@ -124,6 +124,7 @@
     }
     &__button {
       z-index: 1;
+      margin-top: 20px;
       .btn_transparent {
         color: #fff;
         border-color: #fff;
@@ -135,4 +136,25 @@
 
 p.implant__col {
   padding-left: 0;
+}
+
+@media (max-width: 1200px) {
+  .implant__width {
+    width: 33.3%;
+  }
+  .implant__image {
+    img {
+      width: 100%;
+    }
+  }
+
+  .implant__content{
+    height: calc(100% - 246px);
+  }
+}
+
+@media (max-width: 900px) {
+  .implant__width {
+    width: 50%;
+  }
 }
