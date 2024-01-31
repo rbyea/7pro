@@ -1,0 +1,149 @@
+.contacts {
+  &_offset {
+    padding-bottom: 100px;
+    padding-top: 50px;
+  }
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 39px;
+  }
+  &__wrap {
+    display: flex;
+    align-items: flex-start;
+  }
+  &__item {
+    margin-right: 95px;
+    &:last-child {
+      margin-right: 0;
+    } 
+  }
+  &__line {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4px;
+    span {
+      color: #1C1C1C;
+      font-feature-settings: 'clig' off, 'liga' off;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1.2;
+      text-transform: uppercase;
+      opacity: 0.5;
+    }
+    img {
+      margin-right: 8px;
+    }
+  }
+  &__sub {
+    color: #1C1C1C;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.2;
+    padding-left: 30px;
+    a {
+      color: #1C1C1C;
+    }
+  }
+  &-social {
+    &__link {
+      border-radius: 8px;
+      background: #F6F9FF;
+      width: 56px;
+      height: 56px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 12px;
+      img {
+        opacity: 0.5;
+        transition: all 0.4s ease;
+      }
+      &:hover {
+        img {
+          opacity: 1;
+        }
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.ymap-container {
+  position: relative;
+  overflow: hidden;
+  margin-top: 24px;
+  cursor: pointer;
+  background: url('../../images/dist/bg-map.jpg') #ffffff no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+#map-yandex {
+  position: relative;
+  z-index: 7;
+  width: 100%;
+  height: 500px;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+/* Индикатор загрузки, который показывается до загрузки карты */
+.loader {
+  position: absolute;
+  z-index: 15;
+  top: -100%;
+  left: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  color: #000000;
+  transition: opacity .7s ease;
+  opacity: 0;
+  background-color: rgba(0,0,0,.55);
+}
+ 
+.loader:after,
+.loader:before {
+  box-sizing: border-box;
+}
+ 
+.loader.is-active {
+  top: 0;
+  opacity: 1;
+}
+ 
+.loader-default:after {
+  position: absolute;
+  top: calc(50% - 24px);
+  left: calc(50% - 24px);
+  width: 48px;
+  height: 48px;
+  content: '';
+  animation: rotation 1s linear infinite;
+  border: solid 8px #ffffff;
+  border-left-color: transparent;
+  border-radius: 50%;
+}
+ 
+@keyframes rotation {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+ 
+@keyframes blink {
+  from {
+    opacity: .5;
+  }
+  to {
+    opacity: 1;
+  }
+}

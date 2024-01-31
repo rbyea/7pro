@@ -1,0 +1,238 @@
+.footer {
+  &-bottom {
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    &__wrap {
+      display: flex;
+      align-items: flex-start;
+    }
+
+    &__item {
+      padding-right: 7px;
+      &:first-child {
+        max-width: 1080px;
+        width: 100%;
+      }
+
+      p {
+        color: #758396;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 1.2;
+        margin-bottom: 24px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    &__right {
+      display: flex;
+      align-items: flex-end;
+      flex-direction: column;
+      color: #1C1C1C;
+      text-align: right;
+      font-feature-settings: 'clig' off, 'liga' off;
+      font-size: 14px;
+      font-weight: 300;
+
+      img {
+        margin-bottom: 12px;
+      }
+
+      P {
+        margin-bottom: 12px;
+        line-height: 1.2;
+
+        span {
+          display: block;
+        }
+      }
+
+      a {
+        color: #9CCCE7;
+        text-align: right;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.2;
+        text-decoration-line: underline;
+      }
+    }
+  }
+
+  &-top {
+    padding-top: 56px;
+    padding-bottom: 45px;
+    background: linear-gradient(98deg, #F6F9FF 16.77%, #F6F6FF 94.24%);
+  }
+
+  &__item {
+    margin-bottom: 24px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    p {
+      color: #3B61A0;
+      font-feature-settings: 'clig' off, 'liga' off;
+      font-size: 14px;
+      font-weight: 400;
+      margin-bottom: 7px;
+      opacity: 0.5;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+
+    a {
+      color: #1C1C1C;
+      font-feature-settings: 'clig' off, 'liga' off;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 1.2;
+    }
+  }
+
+  &-buy {
+    p {
+      color: rgba(59, 97, 160, 0.50);
+      text-align: right;
+      font-feature-settings: 'clig' off, 'liga' off;
+      font-size: 14px;
+      margin-bottom: 10px;
+      font-weight: 400;
+      line-height: 1.2;
+    }
+
+    position: relative;
+    top: 7px;
+  }
+
+  &-main {
+    display: flex;
+
+    &-under {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      &__line {
+        a {
+          color: rgba(59, 97, 160, 0.50);
+          font-feature-settings: 'clig' off, 'liga' off;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 1.2;
+          text-decoration-line: underline;
+          margin-right: 16px;
+          position: relative;
+
+          &:last-child {
+            &:before {
+              content: "";
+              position: absolute;
+              height: 14px;
+              left: -8px;
+              width: 1px;
+              bottom: 1px;
+              background-color: rgba(59, 97, 160, 0.50);
+            }
+
+            margin-right: 0;
+          }
+        }
+      }
+
+      &__social {
+        p {
+          color: rgba(59, 97, 160, 0.50);
+          font-feature-settings: 'clig' off, 'liga' off;
+          margin-bottom: 12px;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 1.2;
+        }
+      }
+
+      &__list {
+        display: flex;
+        align-items: center;
+      }
+
+      &__link {
+        margin-right: 32px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+
+    &__col {
+      max-width: max-content;
+      margin-right: 17px;
+      flex: 1;
+
+      &:last-child {
+        margin-right: 0;
+        max-width: 312px;
+        width: 100%;
+      }
+    }
+
+    &-column {
+      flex-direction: column;
+    }
+
+    &__item {
+      padding: 24px 32px 32px 32px;
+      border-radius: 12px;
+      border: 3px solid #FFF;
+      background: #F9FBFF;
+    }
+
+    &__content {
+      display: flex;
+      align-items: flex-start;
+    }
+
+    &__block {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-right: 25px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    &__label {
+      margin-bottom: 24px;
+      color: #94C5CC;
+      font-feature-settings: 'clig' off, 'liga' off;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+
+    &__link {
+      color: #1C1C1C;
+      font-feature-settings: 'clig' off, 'liga' off;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 1.2;
+      margin-bottom: 24px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+  }
+}
