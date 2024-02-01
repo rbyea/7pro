@@ -3,6 +3,7 @@
     padding-top: 100px;
     padding-bottom: 50px;
   }
+
   &__container {
     margin-top: 40px;
     margin-left: -12px;
@@ -11,15 +12,38 @@
     align-items: flex-start;
     flex-wrap: wrap;
   }
+
   &__width {
-    width: 25%;
+    // width: 25%;
     padding-left: 12px;
     padding-right: 12px;
   }
+
   &__item {
     padding: 20px 21.25px 20px 23px;
     border-radius: 12px;
     background: #FFF;
     box-shadow: 1px 1px 19px 0px rgba(59, 130, 246, 0.15);
+  }
+
+  .swiper-slide {
+    width: 25%;
+  }
+
+  .swiper {
+    overflow: visible;
+  }
+}
+
+@media (max-width: 990px) {
+  .licenses_offset {
+    padding-bottom: 65px;
+    padding-top: 65px;
+  }
+}
+
+@media (max-width: 650px) {
+  .licenses__item {
+    padding: 15px;
   }
 }

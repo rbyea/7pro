@@ -91,7 +91,6 @@
   background-color: transparent;
 }
 
-/* Индикатор загрузки, который показывается до загрузки карты */
 .loader {
   position: absolute;
   z-index: 15;
@@ -145,5 +144,41 @@
   }
   to {
     opacity: 1;
+  }
+}
+
+
+@media (max-width: 1170px) {
+  .contacts__list {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .contacts__wrap {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  .contacts__item {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 800px) {
+  .contacts__wrap {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 24px;
+  }
+  .contacts__item {
+    margin-bottom: 24px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  #map-yandex {
+    height: 250px;
   }
 }

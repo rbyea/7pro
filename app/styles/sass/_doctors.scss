@@ -1,6 +1,4 @@
 .doctors {
-  margin-top: 40px;
-
   &_bg {
     padding-top: 100px;
     padding-bottom: 100px;
@@ -91,5 +89,38 @@
       font-weight: 500;
       margin-bottom: 17px;
     }
+  }
+}
+
+@media (max-width: 990px) {
+  .doctors_offset {
+    padding-top: 65px;
+    padding-bottom: 65px;
+  }
+}
+
+@media (max-width: 850px) {
+  .doctors-slider__image {
+    img {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .doctors-slider.swiper {
+    overflow: visible;
+  }
+  .doctors__arrows {
+    display: none;
+  }
+  .swiper-pagination-bullet {
+    background: #3B8293;
+  }
+
+  .swiper-doctor-pagination {
+    text-align: center;
+    position: relative;
+    bottom: -18px;
   }
 }

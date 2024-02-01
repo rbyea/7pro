@@ -87,3 +87,49 @@
   background-position: 0 0;
 }
 
+@media (max-width: 1200px) {
+  .choice__width {
+    width: 50%;
+    margin-bottom: 50px;
+  }
+  .choice__wrap {
+    margin-bottom: 0;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 990px) {
+  .youtube {
+    height: 440px;
+    background-size: cover;
+    background-position: center;
+  }
+  .choice__video {
+    height: 440px;
+  }
+  .choice_offset {
+    padding-bottom: 65px;
+    padding-top: 65px;
+  }
+}
+
+@media (max-width: 650px) {
+  .choice__width {
+    width: 100%;
+  }
+  .choice__width {
+    margin-bottom: 30px;
+  }
+  .youtube .play {
+    height: 60px;
+    background-size: cover;
+    background-position: center;
+    width: 60px;
+  }
+}
+
+@media (max-width: 410px) {
+  .choice__video, .youtube {
+    height: 200px;
+  }
+}

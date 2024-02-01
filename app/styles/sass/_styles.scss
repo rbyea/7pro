@@ -18,6 +18,11 @@ body {
   font-weight: 400;
 }
 
+body,
+html {
+  overflow-x: hidden;
+}
+
 .wrapper__default {
   max-width: 1400px;
   width: 100%;
@@ -55,6 +60,11 @@ body {
   font-weight: 500;
   line-height: 28px;
   border: 2px solid #93AED1;
+
+  &:hover {
+    color: #fff;
+    background-color: #93AED1;
+  }
 }
 
 img {
@@ -126,4 +136,14 @@ hr {
   border: none;
   box-shadow: none;
   opacity: 1;
+}
+
+@media (max-width: 990px) {
+  .title__main {
+    font-size: 32px;
+  }
+}
+
+button.btn__default {
+  border: none
 }

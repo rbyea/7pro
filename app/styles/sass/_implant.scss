@@ -132,6 +132,33 @@
       }
     }
   }
+  &-slider  {
+    .swiper-wrapper {
+      flex-wrap: wrap;
+    }
+  }
+  &-mobile {
+    display: none;
+  }
+  .btn_transparent {
+    &:hover {
+      color: #fff;
+      background-color: #93AED1;
+    }
+  }
+}
+
+.implant-form {
+  .btn__default {
+    &:hover {
+      color:#93AED1;
+      background-color: #fff;
+    }
+  }
+}
+
+.swiper-impant-pagination {
+  display: none;
 }
 
 p.implant__col {
@@ -156,5 +183,54 @@ p.implant__col {
 @media (max-width: 900px) {
   .implant__width {
     width: 50%;
+  }
+  .implant_offset {
+    padding-top: 65px;
+    padding-bottom: 65px;
+  }
+}
+
+@media (max-width: 650px) {
+  .implant__width {
+    width: 100%;
+  }
+
+  .implant-slider .swiper-wrapper {
+    flex-wrap: nowrap;
+  }
+
+  .implant__content {
+    height: auto;
+  }
+
+  .implant-slider.swiper {
+    overflow: visible;
+  }
+
+  .implant__width {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .implant__wrapper {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .swiper-impant-pagination {
+    display: block;
+    bottom: 4px;
+    position: relative;
+    text-align: center;
+    .swiper-pagination-bullet {
+      background: #93AED1;
+
+    }
+    .swiper-pagination-bullet-active {
+      background: #93AED1;
+    }
+  }
+  .implant-mobile {
+    display: block;
+    margin-top: 70px;
   }
 }
